@@ -1,18 +1,23 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './components/Layout.js';
-
+import LoginContainer from './components/LoginContainer.js';
+import Footer from './components/Footer.js';
 
 import './css/styles.css';
+import './css/login.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={ <Layout/> }>
+      <Layout/>
+      <div className="container">
+        <Routes>
+          <Route index element={ <LoginContainer/> }></Route>
           <Route path="admin"></Route>
-        </Route>
-      </Routes>
+        </Routes>
+      </div>
+      <Footer/>
     </BrowserRouter>
   );
 }
