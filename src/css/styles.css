@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+p, h1 {
+  color: #404244;
+}
+
 body {
   margin: 0;
   padding: 0;
