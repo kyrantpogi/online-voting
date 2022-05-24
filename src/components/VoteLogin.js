@@ -1,26 +1,38 @@
 import LoginContainer from './LoginContainer.js';
 import { useState } from 'react';
 
+
+
 function VoteLogin() {
-  let [username, setUsername] = useState("");
+  let [uid, setUid] = useState("");
   let [password, setPassword] = useState("");
 
-  const inputUsername = (event) => {
-    setUsername(event.target.value);
-  }
+  const submitFunc = async () => {
+    let data = {
+      userType: "voter",
+      uid: uid,
+      password: btoa(password)
+    }
 
-  const inputPassword = (event) => {
-    setPassword(event.target.value);
-  }
+    let post = await fetch("http://localhost:5000/login", {
+      method: "POST",
+      body: JSON.stringify(data)
+    });
 
-  const submitFunc = () => {
-    console.log(username);
-    console.log(password);
-    alert(username);
+    let response = await post.json();
+    
+    if (response.authenticate) {
+      //redirect
+    } else {
+
+    }
   }
 
   return (
-    <LoginContainer changeUsername={ inputUsername } changePassword={ inputPassword } submitFunc={ submitFunc }/>
+    <LoginContainer changeUid={ (event) => { setUid(event.target.value); } } 
+      changePassword={ (event) => { setPassword(event.target.value); } } 
+      submitFunc={ submitFunc }
+    />
   );
 }
 

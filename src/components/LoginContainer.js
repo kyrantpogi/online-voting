@@ -4,11 +4,11 @@ function LoginContainer(props) {
   return (
     <form className="login-container">
       <h1>Login</h1>
-      <div className="login-form">
-        <input onChange={ props.changeUsername } type="text" placeholder="Username"/>
+      <div className="login-form error">
+        <input onChange={ props.changeUid } type="text" placeholder="UID"/>
       </div>
       <div className="login-form">
-        <input type="text" onChange={ props.changePassword } placeholder="Password"/>
+        <input type="password" onChange={ props.changePassword } placeholder="Password"/>
       </div>
       <div className="login-form btn" onClick={ props.submitFunc }>
         <p>Submit</p>
