@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
 function LoginContainer(props) {
+
   return (
     <form className="login-container">
       <h1>Login</h1>
-      <div className="login-form error">
+      <div className="login-form">
         <input onChange={ props.changeUid } type="text" placeholder="UID"/>
       </div>
       <div className="login-form">
