@@ -1,7 +1,6 @@
 import LoginContainer from './LoginContainer.js';
 import { useState } from 'react';
-
-
+import makeFormRed from './global/global.js';
 
 function VoteLogin() {
   let [uid, setUid] = useState("");
@@ -24,7 +23,7 @@ function VoteLogin() {
     if (response.authenticate) {
       //redirect
     } else {
-
+      makeFormRed();
     }
   }
 

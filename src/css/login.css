@@ -25,7 +25,11 @@
 }
 
 .login-form.error {
-  border: 1px solid #e96969;
+  border: 2px solid #FFD1D1;
+}
+
+.login-form.error:hover:not(.btn) {
+  border: 2px solid #FFD1D1;
 }
 
 .login-form:hover:not(.btn) {
@@ -49,7 +53,7 @@
 }
 
 .login-form.btn {
-  background-color: #0000FF;
+  background-color: var(--blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +62,7 @@
 }
 
 .login-form.btn:hover {
-  background-color: #DC143C;
+  background-color: var(--crimson);
 }
 
 .login-form.btn:active {
