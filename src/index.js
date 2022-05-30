@@ -4,6 +4,7 @@ import Layout from './components/Layout.js';
 import Footer from './components/Footer.js';
 import VoteLogin from './components/VoteLogin.js';
 import AdminLogin from './components/AdminLogin.js';
+import HelloWorld from './components/HelloWorld.js';
 
 import './css/styles.css';
 import './css/login.css';
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route index element={ <VoteLogin/> }></Route>
           <Route path="admin" element={ <AdminLogin/> }></Route>
+          <Route path="voter-dashboard" element={ <HelloWorld/> }/>
         </Routes>
       </div>
       <Footer/>

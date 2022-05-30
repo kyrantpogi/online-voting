@@ -1,10 +1,12 @@
 import LoginContainer from './LoginContainer.js';
 import { useState } from 'react';
 import makeFormRed from './global/global.js';
+import { useNavigate } from 'react-router-dom';
 
 function VoteLogin() {
   let [uid, setUid] = useState("");
   let [password, setPassword] = useState("");
+  let navigate = useNavigate();
 
   const submitFunc = async () => {
     let data = {
@@ -22,6 +24,7 @@ function VoteLogin() {
     
     if (response.authenticate) {
       //redirect
+      navigate("/voter-dashboard");
     } else {
       makeFormRed();
     }
