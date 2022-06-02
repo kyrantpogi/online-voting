@@ -23,7 +23,7 @@ function VoteLogin() {
     let response = await post.json();
     
     if (response.authenticate) {
-      //redirect
+      sessionStorage.setItem("token", response.token);
       navigate("/voter-dashboard");
     } else {
       makeFormRed();
