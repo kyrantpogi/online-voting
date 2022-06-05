@@ -39,6 +39,35 @@ function Layout() {
       </>
     );
   }
+
+  if (currentUrl("admin-dashboard")) {
+    return (
+      <>
+        <nav>
+          <div className="nav-link med">
+            <NavLink to="/">
+              Status
+              <div className="nav-underline"></div>
+            </NavLink>
+          </div>
+          <div className="nav-link med">
+            <NavLink to="/">
+              Candidates
+              <div className="nav-underline"></div>
+            </NavLink>
+          </div>
+          <div className="nav-link med">
+            <NavLink to="/">
+              Settings
+              <div className="nav-underline"></div>
+            </NavLink>
+          </div>
+        </nav>
+        <Outlet/>
+      </>
+    );
+  }
+
   return (
     <>
       <nav>
