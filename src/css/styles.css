@@ -66,6 +66,10 @@ nav {
   width: 150px;
 }
 
+.nav-link.med {
+  width: 115px;
+}
+
 .container {
   width: 100%;
   min-height: 900px;

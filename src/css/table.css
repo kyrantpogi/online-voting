@@ -1,0 +1,62 @@
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  margin: 1cm auto;
+  position: relative;
+}
+table * {
+  position: relative;
+}
+
+table th {
+  font-family: "ubuntu";
+  font-weight: 700;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+table td {
+  font-family: "ubuntu";
+  font-weight: 300;
+}
+
+table thead tr {
+  height: 60px;
+  background: var(--blue);
+  font-size: 16px;
+}
+table tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #e3f1d5;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table td,
+table th {
+  text-align: center;
+}
+table td.l,
+table th.l {
+  text-align: right;
+}
+table td.c,
+table th.c {
+  text-align: center;
+}
+table td.r,
+table th.r {
+  text-align: center;
+}
+
+table td input[type="radio"] {
+  accent-color: var(--crimson);
+}
